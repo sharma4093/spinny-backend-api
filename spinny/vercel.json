@@ -1,0 +1,13 @@
+{
+    "builds":[{
+        "src":"spinny/wsgi.py",
+        "use":"@vercel/python",
+        "config":{"maxLambdaSize":"30mb","runtime": "python"}
+    }],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"spinny/wsgi.py"
+        }
+    ]
+}
